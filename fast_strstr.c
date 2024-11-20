@@ -60,7 +60,7 @@ char *fast_strstr(const char *haystack, const char *needle)
     const char   *i_haystack    = haystack + 1
              ,   *i_needle      = needle   + 1;
 
-    unsigned int  sums_diff     = *haystack;
+    unsigned int  sums_diff     = *haystack - *needle;
     bool          identical     = true;
 
     while (*i_haystack && *i_needle) {
